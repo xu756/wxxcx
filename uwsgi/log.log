@@ -1,0 +1,329 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Sun Apr 10 08:39:07 2022] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 09 April 2022 00:42:12
+os: Linux-3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021
+nodename: VM-4-7-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /wxapp/uwsgi
+writing pidfile to /wxapp/uwsgi/master.pid
+detected binary path: /usr/local/bin/uwsgi
+setuid() to 1002
+chdir() to /wxapp
+your processes number limit is 7260
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 102400
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :4000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41522 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Nov 16 2020, 16:55:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x177fbc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x177fbc0 pid: 27027 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27027)
+spawned uWSGI worker 1 (pid: 27034, cores: 1)
+spawned uWSGI worker 2 (pid: 27035, cores: 1)
+spawned uWSGI worker 3 (pid: 27036, cores: 1)
+spawned uWSGI worker 4 (pid: 27037, cores: 1)
+spawned uWSGI http 1 (pid: 27038)
+[pid: 27037|app: 0|req: 1/1] 127.0.0.1 () {56 vars in 1187 bytes} [Sun Apr 10 08:39:11 2022] GET / => generated 155 bytes in 108 msecs (HTTP/1.0 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 1/2] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:39:21 2022] GET /getswiper/ => generated 311 bytes in 113 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 1/3] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:39:32 2022] GET /api/login?code=091TE0ll2fQhY842Ltnl2y6LLI1TE0lL => generated 0 bytes in 97 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'eKME6VMo2NVxX7YE9K41Ew==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27036|app: 0|req: 1/4] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:39:32 2022] GET /api/login/?code=091TE0ll2fQhY842Ltnl2y6LLI1TE0lL => generated 95 bytes in 186 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 2/5] 127.0.0.1 () {44 vars in 763 bytes} [Sun Apr 10 08:40:50 2022] GET /getswiper/ => generated 311 bytes in 12 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 2/6] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:42:09 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 2/7] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:43:25 2022] GET /getswiper/ => generated 311 bytes in 14 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 2/8] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:44:02 2022] GET /api/login?code=091TnF000NvPCN1lha200mbi890TnF0K => generated 0 bytes in 1 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'cmH5nrhMEhTH2/bjp8aPBQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 3/9] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:44:02 2022] GET /api/login/?code=091TnF000NvPCN1lha200mbi890TnF0K => generated 95 bytes in 64 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 3/10] 127.0.0.1 () {46 vars in 921 bytes} [Sun Apr 10 08:44:23 2022] GET /api/login?code=031j6Qll2ur6Z84xemll2cfz890j6QlT => generated 0 bytes in 1 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': '1AQkbboldqE91Cvg82v+xQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 3/11] 127.0.0.1 () {44 vars in 838 bytes} [Sun Apr 10 08:44:23 2022] GET /api/login/?code=031j6Qll2ur6Z84xemll2cfz890j6QlT => generated 95 bytes in 97 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 3/12] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:45:27 2022] GET /getswiper/ => generated 311 bytes in 11 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 4/13] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:46:31 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 4/14] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:46:53 2022] GET /api/login?code=061Bvo000mYFDN1yoi000yqrxI3Bvo0t => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'NDKMpbKJctaHKGb/WwByng==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 4/15] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:46:53 2022] GET /api/login/?code=061Bvo000mYFDN1yoi000yqrxI3Bvo0t => generated 95 bytes in 121 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 4/16] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:47:32 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 5/17] 127.0.0.1 () {46 vars in 920 bytes} [Sun Apr 10 08:47:55 2022] GET /api/login?code=0517wB0w3YaaiY2qqJ1w32w7cd47wB07 => generated 0 bytes in 1 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'NDKMpbKJctaHKGb/WwByng==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27034|app: 0|req: 5/18] 127.0.0.1 () {44 vars in 838 bytes} [Sun Apr 10 08:47:55 2022] GET /api/login/?code=0517wB0w3YaaiY2qqJ1w32w7cd47wB07 => generated 95 bytes in 85 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 5/19] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:49:05 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 5/20] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:51:07 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 6/21] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:51:40 2022] GET /api/login?code=021b3rFa1rZ5YC0eIuGa12F5rT2b3rFb => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'wS/arkiIp9ESNUarZj5+qQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27034|app: 0|req: 6/22] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:51:40 2022] GET /api/login/?code=021b3rFa1rZ5YC0eIuGa12F5rT2b3rFb => generated 95 bytes in 94 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 6/23] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:52:49 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 6/24] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:53:43 2022] GET /api/login?code=061XL30w3UtIiY2ecd0w3elCGz1XL30K => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': '1dmGiH499VeTb7NShUIi6A==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 7/25] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:53:43 2022] GET /api/login/?code=061XL30w3UtIiY2ecd0w3elCGz1XL30K => generated 95 bytes in 91 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 7/26] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:54:11 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 7/27] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:54:31 2022] GET /api/login?code=001swKkl27Q1Y84cLCkl2FsIuG1swKkP => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'yIuf+KJDWHMeqodguGfGoQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27036|app: 0|req: 7/28] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:54:31 2022] GET /api/login/?code=001swKkl27Q1Y84cLCkl2FsIuG1swKkP => generated 95 bytes in 71 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 8/29] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 08:56:34 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 8/30] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:56:45 2022] GET /api/login?code=011tsZFa1q5xXC0nPCFa1mjxcn1tsZFV => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': '3yKs+Qh9/ZQEGfeRpp79sQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 8/31] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:56:45 2022] GET /api/login/?code=011tsZFa1q5xXC0nPCFa1mjxcn1tsZFV => generated 95 bytes in 74 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 8/32] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:56:50 2022] GET /api/login?code=041lge100zGuEN1Utk3000Mk2V3lge19 => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': '3yKs+Qh9/ZQEGfeRpp79sQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 9/33] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:56:50 2022] GET /api/login/?code=041lge100zGuEN1Utk3000Mk2V3lge19 => generated 95 bytes in 78 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 9/34] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 08:57:21 2022] GET /api/login?code=051M8T0w3PLqiY2lk01w3JE5BK0M8T0S => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'xkvSFJAsrxGD1U6q09eRCQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 9/35] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 08:57:21 2022] GET /api/login/?code=051M8T0w3PLqiY2lk01w3JE5BK0M8T0S => generated 95 bytes in 93 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 9/36] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:00:04 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 10/37] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:02:33 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 10/38] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:02:41 2022] GET /api/login?code=051QIrFa1Na5YC0jVwHa1lEcSd3QIrFe => generated 0 bytes in 1 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'gd0RSl8DCWurBI70fegFbQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 10/39] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:02:41 2022] GET /api/login/?code=051QIrFa1Na5YC0jVwHa1lEcSd3QIrFe => generated 95 bytes in 100 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 10/40] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:02:54 2022] GET /api/login?code=021jbAll2H0KX84NICol2yJKSd3jbAlQ => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'gd0RSl8DCWurBI70fegFbQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 11/41] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:02:55 2022] GET /api/login/?code=021jbAll2H0KX84NICol2yJKSd3jbAlQ => generated 95 bytes in 96 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 11/42] 127.0.0.1 () {46 vars in 921 bytes} [Sun Apr 10 09:03:01 2022] GET /api/login?code=0219NIFa1cdmYC0T3wIa1YXvxo49NIFj => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'gd0RSl8DCWurBI70fegFbQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 11/43] 127.0.0.1 () {44 vars in 838 bytes} [Sun Apr 10 09:03:01 2022] GET /api/login/?code=0219NIFa1cdmYC0T3wIa1YXvxo49NIFj => generated 95 bytes in 89 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 11/44] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:04:15 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 12/45] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:04:22 2022] GET /api/login?code=041Izp000KzLDN1uYE000reC3m1Izp0n => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'gd0RSl8DCWurBI70fegFbQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27034|app: 0|req: 12/46] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:04:22 2022] GET /api/login/?code=041Izp000KzLDN1uYE000reC3m1Izp0n => generated 95 bytes in 79 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 12/47] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:05:39 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 12/48] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:06:33 2022] GET /api/login?code=051y30Ga1liDXC0w2AJa1REPnA0y30Gb => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'jiePGWDoyWnZxVzmJzieRw==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 13/49] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:06:33 2022] GET /api/login/?code=051y30Ga1liDXC0w2AJa1REPnA0y30Gb => generated 95 bytes in 97 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 13/50] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:07:35 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 13/51] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:07:44 2022] GET /api/login?code=011zVe100DPAEN1THB200WD6Yr4zVe15 => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'jiePGWDoyWnZxVzmJzieRw==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27036|app: 0|req: 13/52] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:07:45 2022] GET /api/login/?code=011zVe100DPAEN1THB200WD6Yr4zVe15 => generated 95 bytes in 100 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 14/53] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:08:29 2022] GET /api/login?code=011QdhGa1RdUXC0srjGa1PyDic2QdhG2 => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'jiePGWDoyWnZxVzmJzieRw==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27034|app: 0|req: 14/54] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:08:29 2022] GET /api/login/?code=011QdhGa1RdUXC0srjGa1PyDic2QdhG2 => generated 95 bytes in 78 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 14/55] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:09:32 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 14/56] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:09:40 2022] GET /api/login?code=041poPGa1njyZC0zTbGa1kKI300poPGW => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'V42VWNy+jqYTY5xOni9o7Q==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 15/57] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:09:40 2022] GET /api/login/?code=041poPGa1njyZC0zTbGa1kKI300poPGW => generated 95 bytes in 86 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 15/58] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:10:12 2022] GET /api/login?code=021T4f100vAAEN1KTh400wf5cM1T4f18 => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'xexGzgPZo2jAHy+J3FR9Ew==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 15/59] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:10:12 2022] GET /api/login/?code=021T4f100vAAEN1KTh400wf5cM1T4f18 => generated 95 bytes in 81 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 15/60] 127.0.0.1 () {44 vars in 763 bytes} [Sun Apr 10 09:10:43 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 16/61] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:10:49 2022] GET /api/login?code=031AdsFa1d7bYC0t1WGa13A7OU0AdsFI => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'b6LH/mYDdsF8n+3IbYuWSg==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27034|app: 0|req: 16/62] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:10:49 2022] GET /api/login/?code=031AdsFa1d7bYC0t1WGa13A7OU0AdsFI => generated 95 bytes in 95 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 16/63] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 09:11:30 2022] GET /api/login?code=011bgsFa1pUaYC0uyOHa1qYRon4bgsFu => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': '+yIz450mv8SJir8kHov0gw==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27036|app: 0|req: 16/64] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 09:11:30 2022] GET /api/login/?code=011bgsFa1pUaYC0uyOHa1qYRon4bgsFu => generated 95 bytes in 64 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 17/65] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 09:11:49 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 17/66] 127.0.0.1 () {54 vars in 899 bytes} [Sun Apr 10 09:15:39 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 17/67] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 10:51:57 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 17/68] 127.0.0.1 () {42 vars in 747 bytes} [Sun Apr 10 10:52:28 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 18/69] 127.0.0.1 () {40 vars in 711 bytes} [Sun Apr 10 10:52:28 2022] GET /getswiper/ => generated 311 bytes in 3 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 18/70] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 10:53:03 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 18/71] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 10:54:05 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 18/72] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 10:54:18 2022] GET /api/login?code=041Xjh1w3djTjY2OZV3w3UiEiw1Xjh1x => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'fVjSWOnr8A3GyVPH3918mQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 19/73] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 10:54:18 2022] GET /api/login/?code=041Xjh1w3djTjY2OZV3w3UiEiw1Xjh1x => generated 95 bytes in 105 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 19/74] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 10:58:23 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 19/75] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 12:59:09 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 19/76] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:31:55 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 20/77] 127.0.0.1 () {40 vars in 712 bytes} [Sun Apr 10 13:32:07 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 20/78] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:40:48 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 20/79] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:41:51 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 20/80] 127.0.0.1 () {44 vars in 763 bytes} [Sun Apr 10 13:43:21 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 21/81] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:44:42 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 21/82] 127.0.0.1 () {40 vars in 712 bytes} [Sun Apr 10 13:44:55 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 21/83] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:46:09 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 21/84] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:48:08 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 22/85] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:49:09 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 22/86] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 13:49:59 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 22/87] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 13:49:59 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 22/88] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:54:21 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 23/89] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:56:00 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 23/90] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 13:56:18 2022] GET /api/login?code=071Pdm0w393ajY2axb3w3ZLstk0Pdm0J => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'YoX87eCyHMdOmUM44yAv4w==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 23/91] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 13:56:19 2022] GET /api/login/?code=071Pdm0w393ajY2axb3w3ZLstk0Pdm0J => generated 95 bytes in 71 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 23/92] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:57:15 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 24/93] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 13:59:08 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 24/94] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:09:17 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 24/95] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:09:17 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 24/96] 127.0.0.1 () {40 vars in 969 bytes} [Sun Apr 10 14:10:21 2022] GET /api/login?code=011YaV0w3v1BiY2OWH0w3k5GXm3YaV0c => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'RndRRHIH3TRqwno45k2yyQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27037|app: 0|req: 25/97] 127.0.0.1 () {40 vars in 971 bytes} [Sun Apr 10 14:10:21 2022] GET /api/login/?code=011YaV0w3v1BiY2OWH0w3k5GXm3YaV0c => generated 95 bytes in 93 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 25/98] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:11:06 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 25/99] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:11:06 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 25/100] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:11:13 2022] GET /getswiper => generated 0 bytes in 1 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 26/101] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:11:13 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 26/102] 127.0.0.1 () {46 vars in 922 bytes} [Sun Apr 10 14:12:46 2022] GET /api/login?code=011Ctg100Q7FEN1a9G000C20oF1Ctg1e => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 217 bytes (1 switches on core 0)
+{'session_key': 'bhWAzSjSThZ7YiFoEB5CeQ==', 'openid': 'ogssg43GxOQCnE6AkN4DTvwqH41Y'}
+[pid: 27035|app: 0|req: 26/103] 127.0.0.1 () {44 vars in 839 bytes} [Sun Apr 10 14:12:46 2022] GET /api/login/?code=011Ctg100Q7FEN1a9G000C20oF1Ctg1e => generated 95 bytes in 66 msecs (HTTP/1.0 200) 4 headers in 134 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 26/104] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:13:11 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 27/105] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:13:11 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 27/106] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:39:14 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 27/107] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:39:14 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 27/108] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:39:49 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 28/109] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:39:49 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 28/110] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:40:05 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 28/111] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:40:05 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 28/112] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:40:15 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 29/113] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:40:16 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 29/114] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:40:33 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 29/115] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:40:33 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 29/116] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 14:40:42 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 30/117] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 14:40:43 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 30/118] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 15:19:16 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 30/119] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 15:19:16 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 30/120] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 15:22:21 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 31/121] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 15:22:21 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 31/122] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 15:22:37 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 31/123] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 15:22:37 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 31/124] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 15:25:55 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 32/125] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 15:32:11 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 32/126] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 15:32:11 2022] GET /getswiper/ => generated 311 bytes in 16 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 32/127] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 18:26:39 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 32/128] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 18:26:39 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 33/129] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 18:27:16 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 33/130] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 18:27:16 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 33/131] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 18:27:39 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 33/132] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 18:27:39 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 34/133] 127.0.0.1 () {44 vars in 764 bytes} [Sun Apr 10 18:40:13 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 34/134] 127.0.0.1 () {40 vars in 894 bytes} [Sun Apr 10 19:42:24 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 34/135] 127.0.0.1 () {40 vars in 896 bytes} [Sun Apr 10 19:42:24 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 34/136] 183.136.225.14 () {30 vars in 403 bytes} [Sun Apr 10 22:21:14 2022] GET / => generated 155 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 35/137] 183.136.225.14 () {32 vars in 463 bytes} [Sun Apr 10 22:21:14 2022] GET / => generated 155 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 27034|app: 0|req: 35/138] 183.136.225.14 () {32 vars in 486 bytes} [Sun Apr 10 22:21:14 2022] GET /favicon.ico => generated 2619 bytes in 10 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+Not Found: /robots.txt
+[pid: 27035|app: 0|req: 35/139] 183.136.225.14 () {32 vars in 484 bytes} [Sun Apr 10 22:21:14 2022] GET /robots.txt => generated 2616 bytes in 10 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 35/140] 160.116.22.21 () {24 vars in 249 bytes} [Sun Apr 10 22:56:44 2022] GET / => generated 155 bytes in 1 msecs (HTTP/1.0 200) 4 headers in 143 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 27037|app: 0|req: 36/141] 160.116.22.21 () {28 vars in 429 bytes} [Sun Apr 10 22:56:44 2022] GET /favicon.ico => generated 2619 bytes in 7 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+Not Found: /robots.txt
+[pid: 27034|app: 0|req: 36/142] 160.116.22.21 () {28 vars in 427 bytes} [Sun Apr 10 22:56:45 2022] GET /robots.txt => generated 2616 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+Not Found: /.well-known/security.txt
+[pid: 27035|app: 0|req: 36/143] 160.116.22.21 () {28 vars in 454 bytes} [Sun Apr 10 22:56:45 2022] GET /.well-known/security.txt => generated 2658 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 36/144] 127.0.0.1 () {42 vars in 746 bytes} [Mon Apr 11 00:27:22 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 37/145] 127.0.0.1 () {40 vars in 711 bytes} [Mon Apr 11 00:27:22 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 37/146] 127.0.0.1 () {44 vars in 767 bytes} [Mon Apr 11 00:28:00 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 37/147] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:06:20 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 37/148] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:06:20 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 38/149] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:08:20 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 38/150] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:08:20 2022] GET /getswiper/ => generated 311 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 38/151] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:08:37 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 38/152] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:08:37 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 39/153] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:09:25 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 39/154] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:09:25 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 39/155] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:09:53 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 39/156] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:09:53 2022] GET /getswiper/ => generated 311 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 40/157] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:10:51 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 40/158] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:10:51 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 40/159] 127.0.0.1 () {40 vars in 896 bytes} [Mon Apr 11 01:12:00 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 40/160] 127.0.0.1 () {40 vars in 898 bytes} [Mon Apr 11 01:12:00 2022] GET /getswiper/ => generated 311 bytes in 6 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 41/161] 42.240.136.36 () {26 vars in 272 bytes} [Mon Apr 11 01:37:24 2022] GET / => generated 155 bytes in 1 msecs (HTTP/1.0 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 27034|app: 0|req: 41/162] 106.75.184.38 () {34 vars in 561 bytes} [Mon Apr 11 01:38:04 2022] GET / => generated 155 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 27035|app: 0|req: 41/163] 106.75.184.38 () {34 vars in 583 bytes} [Mon Apr 11 01:38:04 2022] GET /favicon.ico => generated 2619 bytes in 5 msecs (HTTP/1.1 404) 4 headers in 136 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 41/164] 188.166.64.65 () {22 vars in 222 bytes} [Mon Apr 11 04:15:36 2022] GET / => generated 155 bytes in 1 msecs (HTTP/1.0 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 27037|app: 0|req: 42/165] 83.97.20.21 () {26 vars in 275 bytes} [Mon Apr 11 16:35:41 2022] GET / => generated 155 bytes in 2 msecs (HTTP/1.0 200) 4 headers in 143 bytes (1 switches on core 0)
+Not Found: /wp-login.php
+[pid: 27034|app: 0|req: 42/166] 127.0.0.1 () {36 vars in 534 bytes} [Tue Apr 12 01:29:51 2022] GET /wp-login.php => generated 2619 bytes in 5 msecs (HTTP/1.0 404) 4 headers in 136 bytes (1 switches on core 0)
+[pid: 27035|app: 0|req: 42/167] 127.0.0.1 () {40 vars in 896 bytes} [Tue Apr 12 01:49:48 2022] GET /getswiper => generated 0 bytes in 0 msecs (HTTP/1.0 301) 5 headers in 179 bytes (1 switches on core 0)
+[pid: 27036|app: 0|req: 42/168] 127.0.0.1 () {40 vars in 898 bytes} [Tue Apr 12 01:49:48 2022] GET /getswiper/ => generated 311 bytes in 64 msecs (HTTP/1.0 200) 6 headers in 202 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 27038)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Apr 18 11:56:49 2022] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 09 April 2022 00:42:12
+os: Linux-3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021
+nodename: VM-4-7-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /wxapp/uwsgi
+writing pidfile to /wxapp/uwsgi/master.pid
+detected binary path: /usr/local/bin/uwsgi
+setuid() to 1002
+chdir() to /wxapp
+your processes number limit is 7260
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address :4000 fd 3
+Python version: 3.6.8 (default, Nov 16 2020, 16:55:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0xe8c6c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 405560 bytes (396 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xe8c6c0 pid: 23797 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23797)
+spawned uWSGI worker 1 (pid: 23800, cores: 1)
+spawned uWSGI worker 2 (pid: 23801, cores: 1)
+spawned uWSGI worker 3 (pid: 23802, cores: 1)
+spawned uWSGI worker 4 (pid: 23803, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Mon Apr 18 11:57:24 2022 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:24 2022 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:24 2022 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:24 2022 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.20 (64bit) on [Mon Apr 18 11:57:42 2022] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 09 April 2022 00:42:12
+os: Linux-3.10.0-1160.45.1.el7.x86_64 #1 SMP Wed Oct 13 17:20:51 UTC 2021
+nodename: VM-4-7-centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /wxapp/uwsgi
+writing pidfile to /wxapp/uwsgi/master.pid
+detected binary path: /usr/local/bin/uwsgi
+setuid() to 1002
+chdir() to /wxapp
+your processes number limit is 7260
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address :4000 fd 3
+Python version: 3.6.8 (default, Nov 16 2020, 16:55:22)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x22f06c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 405560 bytes (396 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x22f06c0 pid: 23943 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23943)
+spawned uWSGI worker 1 (pid: 23945, cores: 1)
+spawned uWSGI worker 2 (pid: 23946, cores: 1)
+spawned uWSGI worker 3 (pid: 23947, cores: 1)
+spawned uWSGI worker 4 (pid: 23948, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Mon Apr 18 11:57:55 2022 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:55 2022 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:55 2022 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Apr 18 11:57:55 2022 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!

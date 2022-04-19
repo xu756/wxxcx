@@ -3,7 +3,7 @@
 # @Author  : xu756
 # @File    : API.py
 import requests
-from wxxxc.models import *
+from wxxcx.models import *
 from django.core.cache import cache
 
 

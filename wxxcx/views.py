@@ -4,7 +4,7 @@ from django_api_cache import api_cache
 from django.views.decorators.cache import cache_page
 from .models import *
 
-from wxxxc.methods.API import wxAPI
+from wxxcx.methods.API import wxAPI
 
 
 # Create your views here.

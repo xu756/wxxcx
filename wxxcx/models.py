@@ -1,5 +1,5 @@
 from django.db import models
-from wxxxc.methods.storage import ImageStorage
+from wxxcx.methods.storage import ImageStorage
 
 
 # 小程序配置

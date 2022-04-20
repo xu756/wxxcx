@@ -26,14 +26,16 @@ def getswiper(request):
 def login(request):
     res, meta = {}, {}
     code = request.GET.get('code')
-    nickName = request.GET.get('nickName')
-    avatarUrl = request.GET.get('avatarUrl')
+    NickName = request.GET.get('nickName')
+    AvatarUrl = request.GET.get('avatarUrl')
     data = wxAPI().getsession(code)
     # wxuser.objects.update(nickname=user['nickname'], arvatar=user['avatarUrl'], openid=data['openid'], session_key=data['session_key'])
     isin = wxuser.objects.filter(openid=data['openid']).exists()
     if isin:
-        wxuser.objects.filter(openid=data['openid']).update(nickname=nickName, arvatar=avatarUrl, session_key=data['session_key'])
+        wxuser.objects.filter(openid=data['openid']).update(nickname=NickName, arvatar=AvatarUrl,
+                                                            session_key=data['session_key'])
     else:
-        wxuser.objects.create(nickname=nickName, arvatar=avatarUrl, openid=data['openid'], session_key=data['session_key'])
+        wxuser.objects.create(nickname=NickName, arvatar=AvatarUrl, openid=data['openid'],
+                              session_key=data['session_key'])
     res['data'] = data
     return JsonResponse(res, json_dumps_params={'ensure_ascii': False})

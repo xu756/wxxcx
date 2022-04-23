@@ -29,7 +29,6 @@ def login(request):
     NickName = request.GET.get('nickName')
     AvatarUrl = request.GET.get('avatarUrl')
     data = wxAPI().getsession(code)
-    # wxuser.objects.update(nickname=user['nickname'], arvatar=user['avatarUrl'], openid=data['openid'], session_key=data['session_key'])
     isin = wxuser.objects.filter(openid=data['openid']).exists()
     if isin:
         wxuser.objects.filter(openid=data['openid']).update(nickname=NickName, arvatar=AvatarUrl,
@@ -38,4 +37,14 @@ def login(request):
         wxuser.objects.create(nickname=NickName, arvatar=AvatarUrl, openid=data['openid'],
                               session_key=data['session_key'])
     res['data'] = data
+    return JsonResponse(res, json_dumps_params={'ensure_ascii': False})
+
+
+# 意见反馈
+def feedback(request):
+    res, meta = {}, {}
+    file = request.FILES.getlist('file')
+    print(file)
+    print(request.POST.get('userfk'))
+    res['res'] = 'ok'
     return JsonResponse(res, json_dumps_params={'ensure_ascii': False})

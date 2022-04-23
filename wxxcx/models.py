@@ -44,6 +44,7 @@ class message(models.Model):
     id = models.AutoField(verbose_name="id", primary_key=True)
     user_id = models.CharField(verbose_name="留言用户openid", max_length=128, db_column="message_user_id")
     content = models.CharField(verbose_name="留言内容", max_length=256)
+    img = models.CharField(verbose_name="留言图片(列表)", max_length=256)
     time = models.DateTimeField(verbose_name="留言时间", auto_now_add=True)
     is_reply = models.BooleanField(verbose_name="是否回复", default=False)
     is_show = models.BooleanField(verbose_name="是否显示", default=True)
@@ -53,4 +54,14 @@ class message(models.Model):
 
     class Meta:
         verbose_name = "留言"
+        verbose_name_plural = verbose_name
+
+
+class message_img(models.Model):
+    id = models.AutoField(verbose_name="id", primary_key=True)
+    message_id = models.CharField(verbose_name="留言id", max_length=128)
+    img = models.ImageField(verbose_name="留言图片", upload_to="message", storage=ImageStorage())
+
+    class Meta:
+        verbose_name = "留言图片"
         verbose_name_plural = verbose_name

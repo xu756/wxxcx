@@ -12,14 +12,15 @@ def index(request):
     a = {'name': '传入数据'}
     # l = message(user_id=1, content='你好')
     # l.save()
+    wxAPI().getAccess_token()
     return render(request, 'index.html', a)
 
 
-# 获取轮播图
 @cache_page(60)
-def getswiper(request):
+def getdefault(request):
     res, meta = {}, {}
-    res['data'] = list(swiper.objects.all().values())[:3]
+    res['swiper'] = list(swiper.objects.all().values())[:3]
+    res['notice'] = notice.objects.values('id', 'title').last()
     return JsonResponse(res, json_dumps_params={'ensure_ascii': False})
 
 

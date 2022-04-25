@@ -14,6 +14,7 @@ class WxxcConfig(models.Model):
         verbose_name_plural = verbose_name
 
 
+# 轮播图
 class swiper(models.Model):
     id = models.AutoField(verbose_name="轮播图id", primary_key=True)
     img = models.ImageField(verbose_name="轮播图", upload_to="banner", storage=ImageStorage())
@@ -22,6 +23,18 @@ class swiper(models.Model):
 
     class Meta:
         verbose_name = "轮播图"
+        verbose_name_plural = verbose_name
+
+
+# 通知
+class notice(models.Model):
+    id = models.AutoField(verbose_name="通知id", primary_key=True)
+    title = models.CharField(verbose_name="通知标题", max_length=32)
+    content = models.TextField(verbose_name="通知内容", blank=True, null=True)
+    time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
+
+    class Meta:
+        verbose_name = "通知"
         verbose_name_plural = verbose_name
 
 

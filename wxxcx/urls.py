@@ -8,7 +8,7 @@ from django.urls import path
 from wxxcx import views
 
 urlpatterns = [
-    path('getswiper', views.getswiper, name='获取轮播图'),
+    path('getdefault', views.getdefault, name='获取默认页面'),
     path('login', views.login, name='登录'),
-    path('feedback',views.feedback,name='意见反馈'),
+    path('feedback', views.feedback, name='意见反馈'),
 ]

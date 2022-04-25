@@ -33,3 +33,10 @@ class messageAdmin(admin.ModelAdmin):
 
 
 admin.site.register(message, messageAdmin)
+
+
+class noticeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'time')
+
+
+admin.site.register(notice, noticeAdmin)

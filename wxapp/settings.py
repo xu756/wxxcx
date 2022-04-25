@@ -79,6 +79,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
+TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 USE_I18N = True
 
 USE_L10N = True

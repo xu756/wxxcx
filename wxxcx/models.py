@@ -38,6 +38,35 @@ class notice(models.Model):
         verbose_name_plural = verbose_name
 
 
+# 专题栏目
+class column(models.Model):
+    name = models.CharField(verbose_name="专题栏目名称", max_length=32, unique=True)
+    path = models.CharField(verbose_name="专题栏目路径", max_length=32)
+    time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
+    img = models.ImageField(verbose_name="专题栏目图片", upload_to="column", storage=ImageStorage())
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "专题栏目"
+        verbose_name_plural = verbose_name
+
+
+# 文章
+class article(models.Model):
+    id = models.AutoField(verbose_name="文章id", primary_key=True)
+    title = models.CharField(verbose_name="文章标题", max_length=32)
+    content = models.TextField(verbose_name="文章内容", blank=True, null=True)
+    time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
+    column = models.ForeignKey(column, verbose_name="文章所属专题栏目", on_delete=models.CASCADE, to_field="name")
+
+    class Meta:
+        verbose_name = "文章"
+        verbose_name_plural = verbose_name
+
+
+# 微信用户
 class wxuser(models.Model):
     id = models.AutoField(verbose_name="用户id", primary_key=True)
     openid = models.CharField(verbose_name="用户openid", max_length=128)
@@ -70,6 +99,7 @@ class message(models.Model):
         verbose_name_plural = verbose_name
 
 
+# 储存留言图片
 class message_img(models.Model):
     id = models.AutoField(verbose_name="id", primary_key=True)
     message_id = models.CharField(verbose_name="留言id", max_length=128)

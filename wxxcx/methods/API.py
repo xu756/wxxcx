@@ -15,8 +15,8 @@ class wxAPI:
 
     # 缓存2个小时
 
+    # noinspection PyPep8Naming
     def getAccess_token(self):
-        cache.clear()
         access_token = cache.get('access_token')
         if access_token is None:
             params = (
@@ -26,10 +26,10 @@ class wxAPI:
             )
             response = requests.post('https://api.weixin.qq.com/cgi-bin/token', params=params)
             access_token = response.json()['access_token']
+            print(access_token)
             res = WxxcConfig.objects.filter(key='access_token').first()
             res.value = access_token
             res.save()
-            print('access_token', access_token)
             cache.set('access_token', access_token, 7000)
             return response.json()['access_token']
         else:

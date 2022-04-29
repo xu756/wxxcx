@@ -9,9 +9,7 @@ from wxxcx.methods.API import wxAPI
 
 # Create your views here.
 def index(request):
-    a = {'name': '传入数据'}
-    # l = message(user_id=1, content='你好')
-    # l.save()
+    a = {'name': '传入数据666'}
     wxAPI().getAccess_token()
     return render(request, 'index.html', a)
 

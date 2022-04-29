@@ -40,3 +40,18 @@ class noticeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(notice, noticeAdmin)
+
+
+class columnAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'path', 'time', 'img')
+
+
+admin.site.register(column, columnAdmin)
+
+
+class articleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'time', 'content', 'column')
+    search_fields = ('title', 'content')
+
+
+admin.site.register(article, articleAdmin)

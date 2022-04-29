@@ -17,8 +17,9 @@ def index(request):
 @cache_page(60)
 def getdefault(request):
     res, meta = {}, {}
-    res['swiper'] = list(swiper.objects.all().values())[:3]
-    res['notice'] = notice.objects.values('id', 'title').last()
+    res['swiper'] = list(swiper.objects.all().values())[:3]  # 轮播图
+    res['notice'] = notice.objects.values('id', 'title').last()  # 公告
+    res['column'] = list(column.objects.all().values())[:3]  # 栏目
     return JsonResponse(res, json_dumps_params={'ensure_ascii': False})
 
 

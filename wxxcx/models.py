@@ -21,6 +21,9 @@ class swiper(models.Model):
     name = models.CharField(verbose_name="轮播图名称", max_length=32)
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name = "轮播图"
         verbose_name_plural = verbose_name
@@ -32,6 +35,9 @@ class notice(models.Model):
     title = models.CharField(verbose_name="通知标题", max_length=32)
     content = models.TextField(verbose_name="通知内容", blank=True, null=True)
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name = "通知"
@@ -61,6 +67,9 @@ class article(models.Model):
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
     column = models.ForeignKey(column, verbose_name="文章所属专题栏目", on_delete=models.CASCADE, to_field="name")
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         verbose_name = "文章"
         verbose_name_plural = verbose_name
@@ -75,6 +84,9 @@ class wxuser(models.Model):
     session_key = models.CharField(verbose_name="会话密钥", max_length=128)
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
     last_time = models.DateTimeField(verbose_name="最后登录时间", auto_now=True)
+
+    def __str__(self):
+        return self.nickname
 
     class Meta:
         verbose_name = "用户"
@@ -93,6 +105,9 @@ class message(models.Model):
     # 回复内容
     reply = models.CharField(verbose_name="回复内容", max_length=256, null=True, blank=True)
     reply_time = models.DateTimeField(verbose_name="回复时间", null=True, blank=True)
+
+    def __str__(self):
+        return self.content
 
     class Meta:
         verbose_name = "留言"

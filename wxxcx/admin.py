@@ -50,7 +50,7 @@ admin.site.register(column, columnAdmin)
 
 
 class articleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'time', 'content', 'column')
+    list_display = ( 'title', 'time','img' ,'column')
     search_fields = ('title', 'content')
 
 

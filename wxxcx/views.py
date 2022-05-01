@@ -14,12 +14,13 @@ def index(request):
     return render(request, 'index.html', a)
 
 
-@cache_page(60)
+# @cache_page(60)
 def getdefault(request):
     res, meta = {}, {}
     res['swiper'] = list(swiper.objects.all().values())[:3]  # 轮播图
     res['notice'] = notice.objects.values('id', 'title').last()  # 公告
-    res['column'] = list(column.objects.all().values())[:3]  # 栏目
+    res['column'] = list(column.objects.all().order_by('-id').values())[:3]  # 栏目
+    res['article'] = list(article.objects.all().order_by('-id').values('id','title','img','column'))[:10]  # 文章
     return JsonResponse(res, json_dumps_params={'ensure_ascii': False})
 
 

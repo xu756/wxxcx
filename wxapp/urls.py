@@ -10,4 +10,5 @@ urlpatterns = [
                   path('', views.index, name='模板样例'),
                   path('vue/', include('vueqd.urls')),
                   path('wxxcx/', include('wxxcx.urls')),
+                  url(r'^ckeditor/', include('ckeditor_uploader.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

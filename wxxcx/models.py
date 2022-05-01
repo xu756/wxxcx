@@ -1,6 +1,8 @@
 from django.db import models
 from wxxcx.methods.storage import ImageStorage
 
+from ckeditor.fields import RichTextField
+
 
 # 小程序配置
 class WxxcConfig(models.Model):
@@ -32,8 +34,8 @@ class swiper(models.Model):
 # 通知
 class notice(models.Model):
     id = models.AutoField(verbose_name="通知id", primary_key=True)
-    title = models.CharField(verbose_name="通知标题", max_length=32)
-    content = models.TextField(verbose_name="通知内容", blank=True, null=True)
+    title = models.CharField(verbose_name="通知标题", max_length=128)
+    content = RichTextField(verbose_name="通知内容", blank=True, null=True)
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
 
     def __str__(self):
@@ -62,10 +64,12 @@ class column(models.Model):
 # 文章
 class article(models.Model):
     id = models.AutoField(verbose_name="文章id", primary_key=True)
-    title = models.CharField(verbose_name="文章标题", max_length=32)
-    content = models.TextField(verbose_name="文章内容", blank=True, null=True)
+    title = models.CharField(verbose_name="文章标题", max_length=64)
+    img = models.ImageField(verbose_name="文章图片", upload_to="article", storage=ImageStorage(), blank=True, null=True)
+    content = RichTextField(verbose_name="文章内容", blank=True, null=True)
     time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
-    column = models.ForeignKey(column, verbose_name="文章所属专题栏目", on_delete=models.CASCADE, to_field="name")
+    column = models.ForeignKey(column, verbose_name="文章所属专题栏目", on_delete=models.CASCADE, to_field="name",
+                               db_column="column_name")
 
     def __str__(self):
         return self.title
